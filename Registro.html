@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="./styleSecondPanel.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registro de Carro</h2>
+        <form id="formulario">
+            <div class="form-group">
+                <label for="license_plate">Placa del Carro:</label>
+                <input type="text" id="license_plate" name="license_plate" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color del Carro:</label>
+                <input type="text" id="color" name="color" required>
+            </div>
+            <input type="file" id="imagen" name="imagen" accept="image/*">
+            <button type="submit" id = "registrar-btn">Registrar Carro</button>
+        </form>
+        <a href="mainPanel.html">Volver a la página principal</a>
+    </div>  
+    <script src='./scripts.js'></script>
+</body>
+
+</html>

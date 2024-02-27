@@ -1,0 +1,67 @@
+/* Estilos para el contenedor de los botones */
+body {
+    background-image: linear-gradient(to right, #6fc2c8, #3f8aaf); /* Gradiente de azul a gris para el fondo */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+  }
+
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    height: 100vh  /* Resta la altura del título-container para que los botones ocupen el resto de la altura visible */
+  }
+  .title-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 10vh; /* Altura del contenedor (mitad de la altura de la ventana del navegador) */
+  }
+
+  
+  /* Estilos para el título */
+  h1 {
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif; /* Fuente alternativa */
+    color: #16191b; /* Color gris oscuro para el texto */
+
+  }
+  
+  /* Estilos para los botones */
+  .button {
+    padding: 40px 80px;
+    margin: 20px 0; /* Ajusta el margen vertical entre los botones según sea necesario */
+    font-size: 20px;
+    border: #16191b;
+    border-radius: 5px;
+    background-color: #007bff; /* Azul */
+    color: #f3f2f2; /* Blanco */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* Estilos de los botones al pasar el cursor sobre ellos */
+  .button:hover {
+    background-color: #0056b3; /* Azul oscuro */
+  }
+  
+  /* Estilos para el texto de los botones */
+  .button span {
+    margin-left: 5px;
+  }
+  
+  /* Estilos para el botón de eliminar */
+  .button.delete {
+    background-color: #dc3545; /* Rojo */
+  }
+  
+  /* Estilos para el botón de eliminar al pasar el cursor sobre él */
+  .button.delete:hover {
+    background-color: #bd2130; /* Rojo oscuro */
+  }
+  

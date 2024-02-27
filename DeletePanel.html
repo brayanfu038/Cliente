@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='./scripts.js'></script>
+    <title>Eliminar Carro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: cornflowerblue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .input-text {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #d32f2f;
+        }
+
+        .link-container {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <form id="formularioDelete">
+    <div class="container" id = "deleteIcon">
+        <h2>Eliminar Carro</h2>
+        <input type="text" id="license_Eliminate" class="input-text" placeholder="Ingrese la placa del carro">
+        <button id="eliminar-btn" class="button" type="button">Eliminar</button>
+        <div class="link-container">
+            <a href="mainPanel.html">Volver a la página principal</a>
+        </div>
+    </div>
+</form>
+<script>
+    // Agrega un event listener al botón "Eliminar"
+    document.getElementById('eliminar-btn').addEventListener('click', function() {
+        // Obtiene el valor de la caja de texto
+        let license_plate = document.getElementById("license_Eliminate").value;
+        // Construye el objeto de transacción
+        let transaction = { license_plate: license_plate };
+        let transactionJson = JSON.stringify(transaction);
+        // Realiza la solicitud fetch
+        console.log(transactionJson);
+        fetch('http://localhost:8081/car', {
+            method: 'PATCH',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: transactionJson,
+         }).then(response => {
+            // Manejo de la respuesta del servidor
+            console.log('Respuesta del servidor:', response);
+        }).catch(error => {
+            // Manejo de errores
+            console.error('Error:', error);
+        });
+    });
+</script>
+</body>
+</html>

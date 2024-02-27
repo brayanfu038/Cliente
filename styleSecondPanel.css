@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Color de fondo */
+  }
+  
+
+
+.container {
+    font-size: 20px; /* Ajusta el tamaño de fuente del contenedor principal */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding: 20px; /* Añadir espacio alrededor del contenido */
+    background-color: cornflowerblue; /* Color de fondo del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  h2 {
+    font-size: 50px; /* Ajusta el tamaño de fuente del título */
+  }
+  
+  .form-group {
+    margin-bottom: 40px; /* Ajusta el margen inferior entre grupos de campos */
+  }
+  
+  label {
+    font-size: 30px; /* Ajusta el tamaño de fuente de las etiquetas */
+    margin-bottom: 500px;
+  }
+  
+  input[type="text"] {
+    margin-top: 50px;
+    font-size: 30px; /* Ajusta el tamaño de fuente de los campos de texto */
+    padding: 10px; /* Ajusta el padding de los campos de texto */
+    width: 70%; /* Ajusta el ancho de los campos de texto */
+  }
+  
+  button[type="submit"] {
+
+    font-size: 30px; /* Ajusta el tamaño de fuente del botón */
+    padding: 15px 30px; /* Ajusta el padding del botón */
+  }
